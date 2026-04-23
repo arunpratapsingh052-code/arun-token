@@ -1,13 +1,14 @@
-const { ethers } = require("hardhat");
+const hre = require("hardhat");
 
 async function main() {
-  const Token = await ethers.getContractFactory("ArunToken");
+  const tokenAddress = "0x8CF0F67B2Ce1E1ca9e319361f803Aec26398a8F3";
 
-  const token = await Token.deploy();
+  const Staking = await hre.ethers.getContractFactory("Staking");
+  const staking = await Staking.deploy(tokenAddress);
 
-  await token.deployed();
+  await staking.deployed();
 
-  console.log("Token deployed to:", token.address);
+  console.log("Staking deployed to:", staking.address);
 }
 
 main().catch((error) => {

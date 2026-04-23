@@ -266,6 +266,44 @@
       "artifacts": [
         "IERC20Metadata"
       ]
+    },
+    "/Users/arunpratapsinghchauhan/my-token/contracts/Staking.sol": {
+      "lastModificationDate": 1776908579935,
+      "contentHash": "b6257295e903b21cecbddca8d4b94521",
+      "sourceName": "contracts/Staking.sol",
+      "solcConfig": {
+        "version": "0.8.20",
+        "settings": {
+          "evmVersion": "paris",
+          "optimizer": {
+            "enabled": false,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ArunToken.sol"
+      ],
+      "versionPragmas": [
+        "^0.8.20"
+      ],
+      "artifacts": [
+        "Staking"
+      ]
     }
   }
 }

@@ -1,11 +1,13 @@
+const { ethers } = require("hardhat");
+
 async function main() {
   const Token = await ethers.getContractFactory("ArunToken");
 
   const token = await Token.deploy();
 
-  await token.waitForDeployment();
+  await token.deployed();
 
-  console.log("Token deployed to:", await token.getAddress());
+  console.log("Token deployed to:", token.address);
 }
 
 main().catch((error) => {

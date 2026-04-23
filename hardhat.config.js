@@ -1,8 +1,5 @@
-require("@nomiclabs/hardhat-ethers");
-require("@nomiclabs/hardhat-etherscan");
+require("@nomicfoundation/hardhat-toolbox");
 require("dotenv").config();
-
-console.log("API KEY:", process.env.ETHERSCAN_API_KEY); // debug
 
 module.exports = {
   solidity: "0.8.20",
@@ -13,8 +10,6 @@ module.exports = {
     },
   },
   etherscan: {
-    apiKey: {
-      sepolia: process.env.ETHERSCAN_API_KEY, // ✅ MUST BE OBJECT
-    },
+    apiKey: process.env.ETHERSCAN_API_KEY,
   },
 };
